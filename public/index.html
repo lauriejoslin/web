@@ -1,58 +1,64 @@
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laurie Joslin - Computer Science Student</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
 
-    <head>
-    <script src="script.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>fire</title>
-    </head>
-
-    <body>
-    <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "firebase/app";
-    import { getAnalytics } from "firebase/analytics";
-    import { getDatabase, ref, set } from "firebase/database";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-    apiKey: "AIzaSyCO-0GTqhoi3KHngEFr2SiG40pPgQ74Dy8",
-    authDomain: "website-4162f.firebaseapp.com",
-    databaseURL: "https://website-4162f-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "website-4162f",
-    storageBucket: "website-4162f.appspot.com",
-    messagingSenderId: "796506113379",
-    appId: "1:796506113379:web:232125127205f82381bf56",
-    measurementId: "G-8Q5FXGDPZ6"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const database = getDatabase(app);
-    document.getElementById("sub").addEventListener("click", function writeUserData(name, age) {
-        const db = getDatabase();
-        name = document.getElementById("ccn").value
-        age = document.getElementById("tbk").value
-        set(ref(db, 'users/'), {
-        username: name,
-        age: age
-        });
-    })
-    </script>
-    <h3>work in progress..</h3>
-    <h4>please enter your:</h4>
-    <input type="text" placeholder="credit card number" id="ccn">
-    <input type="text" placeholder="three digits on the back" id="tbk">
-    <button onclick="writeUserData(3, ccn, tbk)">submit</button>
-
-    </body>
+<body>
 
 
+<main>
+
+<div class="container py-4">
+
+<!--header class="pb-3 mb-4 border-bottom">
+<a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+<span class="fs-4"></span>
+</a>
+</header-->
+
+<div class="p-5 mb-4 bg-light rounded-3">
+	<div class="container-fluid py-5">
+	<h1 class="display-5 fw-bold">Laurie Joslin</h1>
+	<p class="col-md-8 lead mb-4">Hi there, I'm a 16 year old student with a keen interest in computer science. I'm interested in how technology can help solve some of the big issues of our time, enhance democracy and improve cities. On this site you can find a range of my projects from coding examples to written research.</p>
+	<!--button class="btn btn-primary btn-lg" type="button">Get Started</button-->
+	</div>
+</div>
+
+
+<div class="row align-items-md-stretch">
+
+<div class="col-md-6">
+<div class="h-100 p-5 text-white bg-dark rounded-3">
+<h2>GitHub Coding Projects</h2>
+<p>I have been developing my skills in Computer Science and have completed various personal projects using different programming languages from Python, to Swift and C. Some of my projects are available on Github here.</p>
+<button class="btn btn-outline-light" type="button">Explore GitHub</button>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="h-100 p-5 bg-light border rounded-3">
+<h2>Research projects</h2>
+<p>I have been exploring ideas about government and data science academically and practically. My EPQ explores how modern technology can play a role in mitigating socio-economic problems locally and nationally and explores the challenges policy makers face when implementing technology solutions.</p>
+<button class="btn btn-outline-secondary" type="button">Explore Research</button>
+</div>
+</div>
+
+</div>
+
+<footer class="pt-3 mt-4 text-muted border-top"> Laurie Joslin - &copy; 2022 </footer>
+
+</div>
+
+
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
 </html>
 
